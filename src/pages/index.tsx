@@ -1,5 +1,6 @@
 import { graphql, Link } from "gatsby"
 import * as React from "react"
+import Container from "../components/Container"
 import MarkdownData from "../types/MarkdownNode"
 
 type AllMarkdownNode = {
@@ -16,19 +17,17 @@ interface IHomeProps {
 
 const Home: React.FC<IHomeProps> = ({ data }) => {
   return (
-    <main>
+    <Container>
+      <h2>Posts</h2>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
           <Link to={node.fields.slug}>
-            <h1>{node.frontmatter.title}</h1>
-            <h2>
-              <time>{node.frontmatter.date}</time>
-            </h2>
-            <p>{node.excerpt}</p>
+            <h3>{node.frontmatter.title}</h3>
           </Link>
+          <p>{node.excerpt}</p>
         </div>
       ))}
-    </main>
+    </Container>
   )
 }
 

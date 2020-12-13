@@ -1,5 +1,6 @@
 import { graphql } from "gatsby"
 import * as React from "react"
+import Container from "../components/Container"
 import MarkdownNode from "../types/MarkdownNode"
 
 interface IPostProps {
@@ -12,11 +13,13 @@ const Post: React.FC<IPostProps> = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   return (
-    <div>
-      <h1>{frontmatter.title}</h1>
-      <h2>{frontmatter.date}</h2>
+    <Container>
+      <h2>{frontmatter.title}</h2>
+      <h3>
+        <time>{frontmatter.date}</time>
+      </h3>
       <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+    </Container>
   )
 }
 

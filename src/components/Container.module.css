@@ -1,0 +1,6 @@
+/* https://jrl.ninja/etc/1/ */
+.container {
+  max-width: 70ch;
+  padding: 2ch;
+  margin: auto;
+}
