@@ -7,6 +7,17 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-images",
+          },
+        ],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -14,7 +25,6 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
-    "gatsby-transformer-remark",
     {
       resolve: "gatsby-plugin-typography",
       options: {

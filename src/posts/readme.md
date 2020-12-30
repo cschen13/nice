@@ -3,4 +3,6 @@ title: Read me
 date: "2020-12-12"
 ---
 
-Hullo
+Hullo, here is a photo of me.
+
+![Headshot](./readme_headshot.jpg)
