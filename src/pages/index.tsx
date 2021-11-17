@@ -33,7 +33,7 @@ const Home: React.FC<IHomeProps> = ({ data }) => {
 
 export const postsQuery = graphql`
   {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id
