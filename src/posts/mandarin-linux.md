@@ -7,10 +7,10 @@ Quick steps to setting up Mandarin Pinyin-based character input on Linux. Steps 
 
 Open a new Terminal window. Ensure that the ibus-libpinyin IME is installed:
 
-```
-$ apt update
-$ apt install ibus-libpinyin
-$ ibus restart
+```bash
+apt update
+apt install ibus-libpinyin
+ibus restart
 ```
 
 You will likely need root privileges to run the above. Make sure you are signed in as an administrator or using `sudo`. After the above steps, sign back out so that you are the local, non-root user again.
@@ -25,9 +25,9 @@ If you think the character choice selection font is too small, like I did, take 
 
 If you need to input Pinyin as-is, you should install the m17n IME:
 
-```
-$ apt install ibus-m17n
-$ ibus-restart
+```bash
+apt install ibus-m17n
+ibus-restart
 ```
 
 Then follow the same setup steps as for the Intelligent Pinyin input, except this time with the "hanyu pinyin" input:
